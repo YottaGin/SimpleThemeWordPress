@@ -1,0 +1,253 @@
+/*
+Theme Name: YottaGin192023
+Theme URI: https://yottagin.com
+Author: GinO
+Author URI: https://yottagin.com
+Description: This is a simple, responsive design theme for wordpress.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+*/
+
+:root {
+  --indicate-hue: 200;
+}
+
+body {
+  font-size: 14px;
+  font-family: Arial, Verdana, sans-serif;
+  margin: 0 auto;
+  background: hsl(var(--indicate-hue), 40%, 95%);
+}
+
+h1, h2, h3, h4, h5, p, span, i, li {
+  color: hsl(var(--indicate-hue), 35%, 50%);
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--indicate-hue), 20%, 40%);
+}
+
+p {
+  padding-bottom: 14px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.container {
+  display: grid;
+  grid-template:
+  "header" auto
+  "main" auto
+  "sidebar" auto
+  "footer" auto
+  / 100%;
+  grid-gap: 15px;
+}
+
+header {
+  grid-area: header;
+  background: hsl(var(--indicate-hue), 40%, 90%);
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 15px 0;
+  margin-left: 10px;
+}
+
+#open_menu {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 35px 0 0 0;
+  margin-right: 10px;
+}
+
+#close_menu {
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+  padding: 15px;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: hsla(var(--indicate-hue), 20%, 20%, 0.9);
+  color: #fff;
+  display: none;
+}
+
+#menu.shown {
+  display: block;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+#menu li {
+  line-height: 2;
+}
+
+#menu a {
+  font-size:14px;
+  color: inherit;
+}
+
+main {
+  grid-area: main;
+    background: hsl(var(--indicate-hue), 80%, 98%);
+}
+
+.post {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.post-header {
+  margin-bottom: 15px;
+}
+
+.post-header h2{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.post-meta {
+  font-size: 12px;
+  padding: 7px 0;
+  color: #555;
+}
+
+.post-content {
+
+}
+
+/* navigetion */
+
+.navigation {
+  overflow: hidden;
+  padding: 10px 3px;
+  font-size: 12px;
+}
+
+.prev {
+  float: left;
+  width: 200px;
+  margin-left: 15px;
+}
+
+.next {
+  float: right;
+  width: 200px;
+  text-align: right;
+  margin-right: 25px;
+}
+
+/* sidebar */
+aside {
+  grid-area: sidebar;
+}
+
+.widget {
+  margin-bottom: 10px;
+}
+
+.widget>h3 {
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 6px;
+  margin-left: 10px;
+}
+
+.widget ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.widget li {
+  line-height: 1.8;
+  margin-left: 10px;
+}
+
+.widget li>* {
+  font-size: 12px;
+}
+
+
+footer {
+  grid-area: footer;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+footer div {
+  font-size: 12px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+/* .gist {width:500px !important;} */
+.gist-file
+.gist-data {max-height: 500px;max-width: 700px;}
+
+
+@media (min-width: 570px) {
+  .container {
+    grid-template:
+    "header header" auto
+    "main sidebar" auto
+    "footer footer" auto
+    / 7fr 2fr;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    width: 90%;
+    max-width: 900px;
+  }
+
+  #open_menu {
+    display: none;
+  }
+
+  #close_menu {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    position: static;
+    background: transparent;
+    color: #333;
+  }
+
+  #menu ul {
+    padding: 0;
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  #menu li {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+  }
+
+  #menu a {
+    font-size:11px;
+    color: inherit;
+  }
+}
