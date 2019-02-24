@@ -199,7 +199,35 @@ footer div {
 
 /* .gist {width:500px !important;} */
 .gist-file
-.gist-data {max-height: 500px;max-width: 700px;}
+.gist-data {
+  max-height: 500px;
+  max-width: 700px;
+}
+
+/* Contact Form */
+
+#respond > .error{
+  padding: 5px 9px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 3px;
+}
+
+#respond  > .success{
+  padding: 5px 9px;
+  border: 1px solid green;
+  color: green;
+  border-radius: 3px;
+}
+
+#respond form span{
+  color: red;
+}
+
+#respond textarea {
+  width: 80%;
+  height: 12rem;
+}
 
 
 @media (min-width: 570px) {
